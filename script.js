@@ -47,13 +47,10 @@ function abcd() {
 }
 var len_of_abcd = abcd.length;
 console.log("Length of abcd function: ", len_of_abcd);
-
 function abc(a, b, c, d) {
 
 }
 var len_of_abc = abc.length;
 console.log("Length of abc fucntion: ", len_of_abc);
-
 console.log("So we can say that number of parameters determines the length of a function");
-
-
+console.log("Type of abcd function: ", typeof(abcd));
