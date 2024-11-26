@@ -56,3 +56,13 @@ console.log("So we can say that number of parameters determines the length of a 
 console.log("Type of abcd function: ", typeof(abcd));
 var ans = abcd()
 console.log(ans);
+
+
+/*  async function  */
+async function example() {
+    var blob = await fetch(`https://randomuser.me/api/`);
+    var ans = await blob.json();
+
+    console.log(ans.results);
+}
+example();
