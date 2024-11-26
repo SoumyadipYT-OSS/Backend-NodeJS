@@ -43,7 +43,7 @@ console.log(obj['numeric']);
 /*  methods of function  */
 console.log("Methods of function in JS");
 function abcd() {
-
+    return 122;
 }
 var len_of_abcd = abcd.length;
 console.log("Length of abcd function: ", len_of_abcd);
@@ -54,3 +54,5 @@ var len_of_abc = abc.length;
 console.log("Length of abc fucntion: ", len_of_abc);
 console.log("So we can say that number of parameters determines the length of a function");
 console.log("Type of abcd function: ", typeof(abcd));
+var ans = abcd()
+console.log(ans);
