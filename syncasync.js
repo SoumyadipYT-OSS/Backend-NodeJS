@@ -1,2 +1,2 @@
 /*  Synchronous  */
-  
+alert("js");
