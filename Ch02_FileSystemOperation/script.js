@@ -1,1 +1,1 @@
-alert("JS");
+console.log("JavaScript");
