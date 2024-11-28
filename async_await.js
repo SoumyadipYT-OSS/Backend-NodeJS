@@ -16,3 +16,13 @@ abcd();
 
 
 // [concept aside]
+// concurrency and parallelism
+/*
+     concurrency => JS mein sync code and async code ek saath process ho
+raha tha ye hain concurrency
+
+    parallelism => focus jaada karta hai different processors and unke cores
+par kaam ko chalaane par.
+
+    throttling => kisi code ko control karna number of executions.
+*/
