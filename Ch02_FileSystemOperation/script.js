@@ -1,14 +1,15 @@
 const fs = require('fs');
 
 /*
-    writefile
-    appendfile
+    fs.writeFile
+    fs.appendFile
+    fs.rename
     copyfile
     rename
     unlink
 */
 
-fs.appendFile("hey.txt", ". Yee NodeJS learning interesting hain", function(err) {
+fs.rename("hey.txt", "renamedFile.txt", function(err) {
     if (err) console.error(err);
     else console.log("done");
-});
+})
