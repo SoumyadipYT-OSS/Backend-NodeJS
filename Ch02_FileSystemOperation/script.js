@@ -8,7 +8,7 @@ const fs = require('fs');
     unlink
 */
 
-fs.writeFile("hey.txt", "hey JS learning journey", function(err) {
+fs.appendFile("hey.txt", "yee NodeJS learning interesting hain", function(err) {
     if (err) console.error(err);
     else console.log("done");
 });
