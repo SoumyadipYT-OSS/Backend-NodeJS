@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node script.js",
+    "amar_program": "echo\"\u001b[36mRunning tests...\u001b[39m\" && node script.js",
+    "test": "echo \"Error: atate akhono kono package specify ney\" && exit 1"
+  },
+  "author": "SoumyadipYT-OSS",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
