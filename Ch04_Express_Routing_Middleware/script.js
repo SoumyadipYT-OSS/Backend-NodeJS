@@ -9,7 +9,7 @@ const app = express();
 
 // app.get("/", requestHandler) --> requestHandler is a middleware, it is always a function
 app.get('/', function (req, res) {
-    res.send('Hello World');
+    res.send('Hello World we are using nodemon -g command.');
 })
 
 app.get("/profile", function (req, res) {
