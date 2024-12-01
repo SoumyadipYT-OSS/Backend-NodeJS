@@ -12,8 +12,22 @@
 const express = require('express');
 const app = express();
 
+app.use(function(req, res, next) {
+    console.log('middleware chala');
+    next();
+});
+
+app.use(function(req, res, next) {
+    console.log('middleware yee dusra bar chala');
+    next();
+});
+
 app.get("/", function(req, res) {
-    res.send("This is index page");
+    res.send("Yee index page hain");
+});
+
+app.get("/about", function(req, res) {
+    res.send("Yee about page hain");
 });
 
 
