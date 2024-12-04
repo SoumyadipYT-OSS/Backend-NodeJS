@@ -12,7 +12,7 @@
         <div class="form p-10 text-white">
             <form action="/edit/<%= filename %>" method="post">
                 <input class="block px-5 py-2 rounded-md outline-none bg-zinc-800" type="text"
-                    placeholder="Title goes here..." name="title" value="<%= filename %>" readonly>
+                    placeholder="New filename..." name="newFilename" value="<%= filename %>">
                 <textarea class="block mt-2 w-full rounded-md outline-none px-5 py-2 resize-none bg-zinc-800" name="details"
                     id="" placeholder="Write your task details here..."><%= filedata %></textarea>
                 <input class="mt-2 bg-blue-600 px-5 py-2 rounded-md" type="submit" value="Update Task">

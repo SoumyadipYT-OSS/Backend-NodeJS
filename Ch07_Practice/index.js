@@ -39,11 +39,18 @@ app.get('/edit/:filename', function(req, res) {
 });
 
 app.post('/edit/:filename', function(req, res) {
-    fs.writeFile(`./files/${req.params.filename}`, req.body.details, function(err) {
+    const oldPath = `./files/${req.params.filename}`;
+    const newPath = `./files/${req.body.newFilename}`;
+    fs.rename(oldPath, newPath, function(err) {
         if (err) {
-            return res.status(500).send("Error updating file");
+            return res.status(500).send("Error renaming file");
         }
-        res.redirect("/");
+        fs.writeFile(newPath, req.body.details, function(err) {
+            if (err) {
+                return res.status(500).send("Error updating file");
+            }
+            res.redirect("/");
+        });
     });
 });
 
