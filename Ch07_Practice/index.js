@@ -14,7 +14,6 @@ app.get('/', function(req, res) {
     });
 });
 
-
 app.get('/file/:filename', function(req, res) {
     fs.readFile(`./files/${req.params.filename}`, "utf-8", function(err, filedata) {
         if (err) {
@@ -30,6 +29,32 @@ app.post('/create', function(req, res) {
     });
 });
 
+app.get('/edit/:filename', function(req, res) {
+    fs.readFile(`./files/${req.params.filename}`, "utf-8", function(err, filedata) {
+        if (err) {
+            return res.status(500).send("Error reading file");
+        }
+        res.render('edit', { filename: req.params.filename, filedata: filedata });
+    });
+});
+
+app.post('/edit/:filename', function(req, res) {
+    fs.writeFile(`./files/${req.params.filename}`, req.body.details, function(err) {
+        if (err) {
+            return res.status(500).send("Error updating file");
+        }
+        res.redirect("/");
+    });
+});
+
+app.post('/delete/:filename', function(req, res) {
+    fs.unlink(`./files/${req.params.filename}`, function(err) {
+        if (err) {
+            return res.status(500).send("Error deleting file");
+        }
+        res.redirect("/");
+    });
+});
 
 app.listen(3000, function() {
     console.log("its running");

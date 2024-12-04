@@ -25,6 +25,10 @@
                     <div class="task min-w-72 px-3 py-4 rounded-md bg-zinc-800">
                         <h1 class="text-white text-3xl tracking-tighter"><%= val %></h1>
                         <a class="text-blue-500 inline-block mt-3" href="/file/<%= val %>">Read More.</a>
+                        <a class="text-yellow-500 inline-block mt-3" href="/edit/<%= val %>">Edit</a>
+                        <form action="/delete/<%= val %>" method="post" style="display:inline;" onsubmit="return confirmDelete(event)">
+                            <button class="text-red-500 inline-block mt-3" type="submit">Delete</button>
+                        </form>
                     </div>
                 <% }) %>
             <% } else { %> 
@@ -32,7 +36,17 @@
             <% } %>
         </div>
     </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function confirmDelete(event) {
+            event.preventDefault();
+            const confirmation = confirm("Are you sure you want to delete this task?");
+            if (confirmation) {
+                event.target.submit();
+            }
+        }
+    </script>
 </body>
-<script src="https://cdn.tailwindcss.com"></script>
 
 </html>
