@@ -12,13 +12,20 @@ app.get('/', (req, res) => {
 app.get('/create', async (req, res) => {
     // this part asynchronous
     let createduser = await userModel.create({
-        name: "subhasis",
-        email: "subhasis@gmail.com",
-        username: "subhasis2002"
+        name: "dishantyadav",
+        email: "dishantyadav@gmail.com",
+        username: "dishant2003"
     });
 
     res.send(createduser);
     console.log("mongodb running...");
 });
+
+
+app.get('/update', async(req, res) => {
+                                // findOneUpdate(findone, update, {new: true})
+    let updateduser = await userModel.findOneUpdate({username: "subhasis2002"}, {name: "Subhasis Majee"}, {new: true});
+    res.send(updateduser);
+})
 
 app.listen(3000);

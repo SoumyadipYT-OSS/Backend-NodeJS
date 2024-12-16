@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(`mongodb://127.0.0.1:27017/mongopractice`);
+mongoose.connect('mongodb+srv://soumyadipmajumder13055:1234@visitors.llmnjfd.mongodb.net/?retryWrites=true&w=majority&appName=Visitors');
 
 const userSchema = mongoose.Schema({
     name: String,
