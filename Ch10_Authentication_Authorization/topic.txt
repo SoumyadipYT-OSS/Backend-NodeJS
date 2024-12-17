@@ -1,0 +1,16 @@
+authorization and authentication
+
+
+Authentication: This is the process of verifying the identity 
+        of a user or system. It's like checking someone's ID 
+        to make sure they are who they claim to be. For example, 
+        when you log in to a website using your username and 
+        password, you are being authenticated.
+
+Authorization: This is the process of determining what an 
+        authenticated user or system is allowed to do. It's 
+        like checking if someone has the right permissions to 
+        access a certain area or perform a specific action. 
+        For example, after logging in, the system checks if 
+        you have the right permissions to access certain 
+        features or data.
