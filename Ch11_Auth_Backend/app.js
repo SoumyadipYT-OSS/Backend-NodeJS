@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-    res.send("Home Page");
+    res.render('index.ejs');
 });
 
 app.listen(3000);
